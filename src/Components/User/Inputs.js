@@ -22,8 +22,8 @@ export const Submit = ({ value })=>(
 )
 
 export const Anchor = ({ returnFunc, label, value })=>(
-  <a className="btn btn-link" onClick={ (e)=>{
+  <span className="btn btn-link" onClick={ (e)=>{
       e.preventDefault()
       returnFunc("loginPage", value)
-    } }>Click here to { label }</a>
+    } }>Click here to { label }</span>
 )

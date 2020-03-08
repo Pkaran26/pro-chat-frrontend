@@ -3,12 +3,20 @@ import Users from './Users/Users'
 import Message from './Message/Message'
 
 class Chat extends Component{
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
-      socket_id: null
+      socketId: null
     }
     this.socket = null
+  }
+
+  componentDidMount(){
+    const { socketId, socket } = this.props
+    this.setState({
+      socketId
+    })
+    this.socket = socket
   }
 
   render(){
